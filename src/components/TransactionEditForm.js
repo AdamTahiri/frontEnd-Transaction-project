@@ -5,7 +5,7 @@ import axios from "axios";
 import { apiURL } from "../util/apiURL";
 const API = apiURL();
 
-function TransactionNewForm({ addTransaction }) {
+const TransactionEditForm = ({ updateTransaction }) => {
   const { index } = useParams();
   let history = useHistory();
   const [transaction, setTransaction] = useState({
@@ -40,9 +40,9 @@ function TransactionNewForm({ addTransaction }) {
     setTransaction({ ...transaction, amount: Number(e.target.value) });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    addTransaction(transaction);
+    await updateTransaction(transaction, index);
     history.push("/transactions");
   };
 
@@ -52,7 +52,7 @@ function TransactionNewForm({ addTransaction }) {
         <label htmlFor="date">Date:</label>
         <input
           id="date"
-          type="date"
+          type="text"
           onChange={handleInput}
           placeholder="date"
           required
@@ -83,6 +83,6 @@ function TransactionNewForm({ addTransaction }) {
       </form>
     </div>
   );
-}
+};
 
-export default TransactionNewForm;
+export default TransactionEditForm;
