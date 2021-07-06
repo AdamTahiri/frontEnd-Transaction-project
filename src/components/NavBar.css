@@ -1,0 +1,38 @@
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, .9);
+    font-family: headline;
+    font-size: 20px;
+    height: 60px;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tran-button {
+    color: #0099ff;
+    font-size: 25px;
+}
+
+.new-tran-button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0099ff;
+    font-size: 25px;
+}
+
+.tran-button:hover {
+    color: rgb(18, 86, 233);
+}
+
+.new-tran-button:hover {
+    color: rgb(18, 86, 233);
+}

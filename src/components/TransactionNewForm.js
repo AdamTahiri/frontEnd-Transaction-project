@@ -79,7 +79,7 @@ function TransactionNewForm({ addTransaction }) {
           placeholder="from"
         />
         <br />
-        <input type="Submit" />
+        <input className="submit-button" type="Submit" />
       </form>
     </div>
   );

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link, useParams, useHistory, withRouter } from "react-router-dom";
+import "./TransactionDetail.css";
 
 import { apiURL } from "../util/apiURL";
 const API = apiURL();
@@ -29,25 +30,29 @@ const TransactionDetail = ({ deleteTransaction }) => {
   };
 
   return (
-    <div>
-      <h1>Transaction Details</h1>
-      <h2>Transaction: {transaction.name}</h2>
-      <h3>From: {transaction.from}</h3>
-      <h3>Date: {transaction.date}</h3>
-      <h3>Amount: {transaction.amount}</h3>
-      <div>
+    <div className="tran-container">
+      <div className="tran-details">
+        <h1>Transaction Details</h1>
+        <h2>Transaction: {transaction.name}</h2>
+        <h3>From: {transaction.from}</h3>
+        <h3>Date: {transaction.date}</h3>
+        <h3>Amount: {transaction.amount}</h3>
+      </div>
+      <section className="tran-buttons">
+        <div>
           <Link to={`/transactions`}>
-              <button>Back</button>
+            <button>Back</button>
           </Link>
-      </div>
-      <div>
+        </div>
+        <div>
           <Link to={`/transactions/${index}/edit`}>
-              <button>Edit</button>
+            <button>Edit</button>
           </Link>
-      </div>
-      <div>
-        <button onClick={handleDelete}>Delete</button>
-      </div>
+        </div>
+        <div>
+          <button onClick={handleDelete}>Delete</button>
+        </div>
+      </section>
     </div>
   );
 };

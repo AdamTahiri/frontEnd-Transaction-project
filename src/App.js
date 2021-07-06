@@ -22,15 +22,6 @@ const API = apiURL();
 function App() {
   const [transactions, setTransactions] = useState([]);
 
-  const fetchTransactions = async () => {
-    try {
-      const res = await axios.get(`${API}/transactions`);
-      setTransactions(res.data);
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
   const addTransaction = async (newTransaction) => {
     try {
       const res = await axios.post(`${API}/transactions`, newTransaction);
@@ -71,14 +62,22 @@ function App() {
 }
 
   useEffect(() => {
-    fetchTransactions();
-  }, [transactions])
+    const fetchTransactions = async () => {
+      try {
+        const res = await axios.get(`${API}/transactions`);
+        setTransactions(res.data);
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    return fetchTransactions();
+  }, [])
 
   const total = transactionTotal();
  
   return (
     <div className="App">
-      <h1>Budget App</h1>
+      <h1>Budget App!</h1>
       <Router>
         <NavBar />
         <Switch>

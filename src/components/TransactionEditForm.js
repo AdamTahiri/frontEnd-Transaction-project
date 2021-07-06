@@ -1,6 +1,7 @@
 import { useParams, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./TransactionEdit.css";
 
 import { apiURL } from "../util/apiURL";
 const API = apiURL();
@@ -52,7 +53,7 @@ const TransactionEditForm = ({ updateTransaction }) => {
         <label htmlFor="date">Date:</label>
         <input
           id="date"
-          type="text"
+          type="date"
           onChange={handleInput}
           placeholder="date"
           required
@@ -79,7 +80,7 @@ const TransactionEditForm = ({ updateTransaction }) => {
           placeholder="from"
         />
         <br />
-        <input type="Submit" />
+        <input className="submit-button" type="Submit" />
       </form>
     </div>
   );

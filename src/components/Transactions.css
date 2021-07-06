@@ -1,0 +1,12 @@
+
+.trans-sec {
+    background-color: rgba(0,153,255,.5);
+    margin: 8%;
+    border-radius: 2%;
+    box-shadow: 0px 5px 10px white;
+}
+
+.total {
+    font-size: 30px;
+    padding-bottom: 30px;
+}
