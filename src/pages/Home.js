@@ -1,8 +1,8 @@
-import React from 'react'
+import './Home.css'
 
 function Home() {
     return (
-        <div>
+        <div className="home">
             <h1>Welcome to the Budget App</h1>
         </div>
     )
