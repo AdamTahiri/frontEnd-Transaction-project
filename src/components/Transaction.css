@@ -3,4 +3,12 @@ li {
     display: flex;
     justify-content: space-around;
     padding: 8px;
+    font-weight: bold;
+}
+
+.tran-li { 
+    padding: 1%;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,9 +1,14 @@
 
 .tran-container { 
+    font-size: 20px;
     margin: 8%;
     background-color: rgba(0,153,255,.5);
     border-radius: 2%;
     box-shadow: 0px 5px 10px white;
+}
+
+.tran-details {
+
 }
 
 .tran-buttons {
@@ -21,5 +26,9 @@
 
 .tran-container button:hover {
     color: rgba(0,153,255);
+}
+
+button {
+    padding: 5px;
 }
 
